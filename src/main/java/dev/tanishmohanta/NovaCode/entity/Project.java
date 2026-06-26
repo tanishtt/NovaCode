@@ -7,16 +7,12 @@ import java.time.Instant;
 
 @Getter
 @Setter
-public class User {
+public class Project {
     private Long id;
-    private String email;
-    private String passwordHash;
     private String name;
-    private String avatarUrl;
-    private String provider;
-    private String providerId;
-    private Boolean emailVerified;
-    private String stripeCustomerId;
+    private User user;
+    Boolean isPublic=false;
+
     private Instant createdAt;
     private Instant updatedAt;
     private Instant deletedAt;
