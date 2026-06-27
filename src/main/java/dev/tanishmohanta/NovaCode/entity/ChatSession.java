@@ -1,5 +1,6 @@
 package dev.tanishmohanta.NovaCode.entity;
 
+
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,19 +10,15 @@ import java.time.Instant;
 
 @Getter
 @Setter
-public class ProjectFile {
-    private Long id;
+public class ChatSession {
     private Project project;
+    private User user;
 
-    private String path;
-    private String s3ObjectKey;
+    private String title;
 
     @CreationTimestamp
     private Instant createdAt;
     @UpdateTimestamp
     private Instant updatedAt;
-
-    private User createdBy;
-    private User updatedBy;
-
+    private Instant deletedAt;
 }

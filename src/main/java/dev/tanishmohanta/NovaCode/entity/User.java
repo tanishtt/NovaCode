@@ -2,6 +2,8 @@ package dev.tanishmohanta.NovaCode.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
 
@@ -17,7 +19,10 @@ public class User {
     private String providerId;
     private Boolean emailVerified;
     private String stripeCustomerId;
+
+    @CreationTimestamp
     private Instant createdAt;
+    @UpdateTimestamp
     private Instant updatedAt;
     private Instant deletedAt;
 }
