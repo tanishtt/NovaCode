@@ -24,7 +24,7 @@ public class Project {
 
     @ManyToOne
     @JoinColumn(name = "owner_id", nullable = false)
-    private User user;
+    private User owner;
 
     private Boolean isPublic=false;
 
